@@ -1,0 +1,12 @@
+# Railway Nixpacks configuration
+# Alternative to Dockerfile - simpler and faster builds
+
+[phases.build]
+cmds = ["npm install", "npm run build"]
+
+[phases.setup]
+nixPkgs = ["nodejs_20", "npm-9_x"]
+
+[static]
+# Serve the dist folder
+serve = "dist"
